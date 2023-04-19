@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+    ports:
+      - "6370:6379"
+    networks:
+      - my-redis-network
+
+  celery:
+    build: .
+    command: celery -A main worker -B --loglevel=INFO
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6370
+      REDIS_DB: 0
+      CELERY_BROKER: redis://redis:6370/0
+      CELERY_RESULT_BACKEND: redis://redis:6370/0
+    networks:
+      - my-redis-network
+
+networks:
+  my-redis-network:
