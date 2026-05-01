@@ -1,0 +1,29 @@
+/* css/weather.tcss */
+
+Sidebar {
+    width: 30%;
+    border-right: solid $accent;
+    padding: 1;
+}
+
+.main-content {
+    width: 70%;
+    padding: 1;
+}
+
+.sidebar-title {
+    text-style: bold;
+    background: $accent;
+    padding: 1;
+    margin-bottom: 1;
+}
+
+ListView {
+    height: 80%;
+}
+
+WeatherWidget {
+    margin: 1;
+    padding: 1;
+    border: solid $primary;
+}
