@@ -1,0 +1,30 @@
+enhancement:
+  changed-files:
+    any-glob-to-any-file:
+      - "src/**/*"
+      - "tinypixels/**/*"
+
+dependencies:
+  changed-files:
+    any-glob-to-any-file:
+      - "pyproject.toml"
+      - "requirements.txt"
+      - "Pipfile*"
+      - "poetry.lock"
+
+documentation:
+  changed-files:
+    any-glob-to-any-file:
+      - "README.md"
+      - "docs/**/*"
+
+github_actions:
+  changed-files:
+    any-glob-to-any-file:
+      - ".github/**/*"
+
+testing:
+  changed-files:
+    any-glob-to-any-file:
+      - "tests/**/*"
+      - "test_*.py"
